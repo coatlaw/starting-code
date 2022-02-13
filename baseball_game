@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h> // rand() 포함 라이브러리
 #include <time.h> // time() 포함 라이브러리
-
 int main() {
 	srand(time(NULL)); // rand() 값을 시간에 따라 변하게 설정
 	int ans = 0;
@@ -25,9 +24,12 @@ int main() {
 		}
 	}
 	else if (a_p3 == a_p1 || a_p3 == a_p2) {
-		a_p3 -= 2;
+		a_p3--;
 		if (a_p3 < 0) {
 			a_p3 += 10;
+		}
+		if (a_p3 == a_p2) {
+			a_p3--;
 		}
 	}
 
@@ -67,7 +69,7 @@ int main() {
 		if (p_p2 == a_p2) {
 			strike++;
 		}
-		else if (p_p2 == a_p3) {
+		else if (p_p2 == a_p1 || p_p2 == a_p3) {
 			ball++;
 		}
 		else
