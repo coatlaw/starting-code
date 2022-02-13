@@ -78,18 +78,18 @@ int main() {
 
 int avoid_dup(int *a_p1, int *a_p2, int *a_p3) {
 	if (*a_p2 == *a_p1) {
-		*a_p2--;
+		*a_p2 -= 1;
 		if (*a_p2 < 0) {
 			*a_p2 += 10;
 		}
 	}
 	else if (*a_p3 == *a_p1 || *a_p3 == *a_p2) {
-		*a_p3--;
+		*a_p3 -= 1;
 		if (*a_p3 < 0) {
 			*a_p3 += 10;
 		}
 		if (*a_p3 == *a_p1 || *a_p3 == *a_p2) {
-			*a_p3--;
+			*a_p3 -= 1;
 		}
 	}
 	return 0;
