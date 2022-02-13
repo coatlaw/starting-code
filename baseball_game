@@ -28,7 +28,7 @@ int main() {
 		if (a_p3 < 0) {
 			a_p3 += 10;
 		}
-		if (a_p3 == a_p2) {
+		if (a_p3 == a_p1 || a_p3 == a_p2) {
 			a_p3--;
 		}
 	}
